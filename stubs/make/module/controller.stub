@@ -1,0 +1,16 @@
+// import type { HttpContext } from '@adonisjs/core/http'
+
+export default class {{entity.name}} {
+  public async index({}: HttpContextContract) {
+    // Your logic here
+  }
+}
+
+{{#var className = string.pascalCase(entity.name)}}
+{{#var resourceFileName = string(className).snakeCase().ext('.ts').toString()}}
+{{{
+  exports({
+    to: app.makePath(entity.path, resourceFileName)
+  })
+}}}
+

@@ -2,13 +2,14 @@
 {{#var resourceFileName = string(className).snakeCase().ext('.ts').toString()}}
 {{{
   exports({
-    to: app.makePath('app/actions', feature.path, feature.name, entity.path, resourceFileName)
+    to: app.makePath(entity.path, resourceFileName)
   })
 }}}
+import { BaseModel } from '@ioc:Adonis/Lucid/Orm'
 
 type Params = {}
 
-export default class {{ className }} {
+export default class {{ className }} extends BaseModel {
   static async handle({}: Params) {
     // do stuff
   }

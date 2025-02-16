@@ -1,7 +1,7 @@
 {
-  "name": "@adocasts.com/actions",
-  "description": "Adds a make:action Ace CLI command to easily create new action handler classes in your AdonisJS 6 application",
-  "version": "1.0.5",
+  "name": "@adonisjs-modular-monolith-kit",
+  "description": "AdonisJS Modular Monolith Kit",
+  "version": "0.0.1",
   "engines": {
     "node": ">=20.6.0"
   },
@@ -36,9 +36,6 @@
     "prepublishOnly": "npm run build",
     "index:commands": "adonis-kit index build/commands"
   },
-  "keywords": [],
-  "author": "tomgobich,adocasts.com",
-  "license": "MIT",
   "devDependencies": {
     "@adonisjs/assembler": "^7.2.3",
     "@adonisjs/core": "^6.3.1",
@@ -62,6 +59,14 @@
   "peerDependencies": {
     "@adonisjs/core": "^6.2.0"
   },
+  "author": "Thuta Min Thway <thutaminthway.dev@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "adonisjs",
+    "modular",
+    "monolith",
+    "module"
+  ],
   "publishConfig": {
     "access": "public",
     "tag": "latest"
@@ -72,6 +77,9 @@
     "branch": "main",
     "anyBranch": false
   },
+  "eslintConfig": {
+    "extends": "@adonisjs/eslint-config/package"
+  },
   "c8": {
     "reporter": [
       "text",
@@ -80,9 +88,6 @@
     "exclude": [
       "tests/**"
     ]
-  },
-  "eslintConfig": {
-    "extends": "@adonisjs/eslint-config/package"
   },
   "prettier": "@adonisjs/prettier-config"
 }
