@@ -12,14 +12,8 @@ export default class MakeModule extends BaseCommand {
   declare name: string
 
   async run() {
-    console.log('name', this.name)
-
     const codemods = await this.createCodemods()
-
     const entity = generators.createEntity(this.name)
-    console.log('entity', entity)
-    console.log('controllerFileName', generators.controllerName(this.name))
-
     const modulePath = `app/modules/${entity.name}`
 
     // Create a default controller
